@@ -28,11 +28,11 @@ public class Piranha_Controller : MonoBehaviour
         // Grabbing components 
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        // Setting the enemies moving direction to the right
+        // Setting the enemies moving direction to the right.
         movingVector = Vector2.right;
         // The enemy will start off moving
         isMoving = true;
-        // Setting a random speed for the enmy within a certain range
+        // Setting a random speed for the enemy within a certain range
         randomSpeed = Random.Range(100f, 150f);
         // Setting the player transform variable to the player's transform
         player = GameObject.Find("Player").transform;
@@ -60,7 +60,7 @@ public class Piranha_Controller : MonoBehaviour
             // Set the velocity to zero
             rb.velocity = Vector2.zero;
 
-            // rotate the enemies forward vector towards the player position
+            // Rotate the enemies forward vector towards the player position
             Quaternion lookRotation = Quaternion.LookRotation((vectorToTarget).normalized);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.fixedDeltaTime * 3f);
 

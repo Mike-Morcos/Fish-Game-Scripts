@@ -14,7 +14,7 @@ public class FishSpawner : MonoBehaviour
 
     public GameObject[] fish; // public array of fish game objects
 
-    private float spawnTimer; // 
+    private float spawnTimer;  
     private float reduceSpawnTimeTimer; // timer variable to reduce the spawn timer
     private float reduceSpawnTime; // amount to reduce thespawn timer
     private float reduceSpawnTimeMax; // maximum amount we want to reduce the spawn timer
@@ -26,7 +26,7 @@ public class FishSpawner : MonoBehaviour
     {
         // Getting this transforms position and storing it in the spawnPosition
         spawnPosition = transform.position;
-        // initializing the time and timer variables
+        // Initializing the time and timer variables
         spawnTimer = 10f;
         reduceSpawnTimeTimer = 8f;
         reduceSpawnTime = 0f;
@@ -42,7 +42,7 @@ public class FishSpawner : MonoBehaviour
         if (reduceSpawnTimeTimer < 0 && reduceSpawnTime < reduceSpawnTimeMax)
         {
             // reset the reduceSpawnTimeTimer variable and increase the amount of time we want
-            // subtract from the span timer.
+            // subtract from the spawn timer.
             reduceSpawnTimeTimer = 8f;
             reduceSpawnTime += .2f;
         }
